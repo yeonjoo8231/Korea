@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+.row {max-width: 960px; margin: 0 auto;}
+body {font-family: '나눔고딕'; font-size: 16px; color: #333;}
+
+#header  { box-shadow: 0px 2px 3px #ddd;
+    position: relative; z-index: 998;
+}
+#header h1 { 
+    float: left; width: 40%;
+}
+#header nav { 
+    float: right; width: 60%;
+    margin-top: 35px;
+    /* border: 1px solid #000; */
+}
+/* #header nav .depth1:after {content:''; display: block; clear: both;} */
+#header nav .depth1 > li {
+    float: left; width: 33.333%;
+    text-align: center;
+    position: relative;
+}
+#header nav .depth1 > li > a {
+    display: block; padding: 13px 0px;
+}
+#header nav .depth1 > li:hover > a {
+    background: #009688; color: #fff;
+}
+#header nav .depth1 > li:hover > .depth2 { display: block; }
+.depth2 {
+    position: absolute; top: 100%; left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    display: none; z-index: 999;
+}
+.depth2 > li { line-height: 2; }
+.depth2 > li > a { display: block; }
+.depth2 > li:hover >a { background: #009688; color: #fff; }
+
+#section  .slide > div {position: relative;}
+#section  .slide > div > .text {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);    
+    text-align: center;
+    padding: 20px 40px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 20px;}
+
+#section .slide > div > .text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+#section .slide > div > .text p {
+    font-size: 26px;
+}
+
+#section .ntpt  { padding: 30px 0;}
+#section .notice  {float: left; width: 47%;}
+#section .partner  {float: right; width: 47%;}
+#section .ntpt h2 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.notice table { font-size: 12px; border-top: 1px solid #000;}
+.notice col:nth-child(1) {width: auto;}
+.notice col:nth-child(2) {width: 90px;}
+.notice table td,.notice table th {
+    padding: 10px 8px;
+}
+.notice table td:nth-child(1) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.notice table td:nth-child(2) {text-align: right;}
+.notice table tbody tr:nth-child(odd) {
+    background: lime;
+}
+.partner .inscom {text-align: center; margin: 20px 0;}
+.partner .inscom a:nth-child(1) >img {width: 50%; padding-right: 20px;}
+.partner .inscom a:nth-child(2) >img {width: 30%;}
+#modal {
+    position: fixed;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: rgba(0, 0,0,0.5);
+    z-index: 9999;
+    display: none;
+}
+#modal:target {display: block;}
+#modal .inner {
+    position: absolute; 
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%); 
+    background: #fff; 
+    padding: 50px 30px;
+}
+#modal .inner > a {
+    display: block;
+    background: #009688; 
+    margin-top: 20px;
+    width: 60px; padding: 15px 0;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    margin: 30px auto 0;
+}
+.partner .mainpjt span { 
+    display: block; font-size: 18px;
+}
+.partner .mainpjt span:nth-child(2) {
+    text-align: center; 
+    padding: 43px 0px;
+ }
+.partner .mainpjt span:nth-child(3) { 
+    text-align: right;
+}
+
+#section article:nth-child(3) ul { overflow: hidden;}
+#section article:nth-child(3) li {
+    float: left; width: 33.33%;
+    text-align: center; padding: 100px 20px 50px;
+    border: 0px solid steelblue;
+}
+#section article:nth-child(3) li img { 
+    display: block;
+    margin: 0px auto 30px;
+}
+#section article:nth-child(3) li a {
+    display: inline-block;
+    padding: 18px 20px;
+    background: #009688;
+    font-size: 25px;
+    color: #fff;
+    border-radius: 15px;
+}
+
+#footer { 
+    background: #009688; color: #fff;
+    padding: 30px 0px;
+}
+#footer .row {overflow: hidden;}
+#footer ul {
+    float: left; 
+}
+#footer ul li {
+    display: inline-block;
+    font-size: 18px;
+    padding-right: 20px;
+    margin: 20px 20px 0px 0px;
+}
+#footer pre {
+    float: right;
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: '나눔고딕';
+}
+/* #section .ntpt > .notice > table {
+    font-size: 12px;
+    line-height: 2.5;
+    padding-bottom: 10px;
+}
+#section .ntpt > .notice > table td {
+    padding: 0 10px;
+}
+#section .ntpt > .notice > table > thead {
+    text-align: center;
+    font-weight: bold;
+    border-top: 2px solid #333;
+} */
